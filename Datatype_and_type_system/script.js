@@ -61,3 +61,15 @@
 //type coercion -> concept where one type converts to another type
 // console.log(typeof("6"+5+9)) //string
 // console.log(typeof("89"-9)) //number because subtract performs only one task but + performs concat and add
+
+//truthy vs falsy values
+//falsy -> 0,false,"",null, undefined, NaN, document.all
+//truthy -> rest all values are truthy values
+// if(-888983){
+//     console.log("hey") //it will print
+// }
+// if(NaN){
+//     console.log("hey44") //it will not print
+// }
+
+//NaN is a failed number operation like 2*"Rupam" -> so js consider it as a number
