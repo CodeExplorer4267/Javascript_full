@@ -68,3 +68,48 @@
 //   console.log(val); // 5 6 7 8 9 
 //  }
 //  abcd(1,2,3,4,5,6,7,8,9);
+
+//return statement returns something after the function execution
+// function abcd(v){
+//     return 20+v;
+// }
+// console.log(abcd(60)); //80
+
+// //first class functions -> we can treat functions as values. Functions value r moto use hobe.
+// function abcd(f){
+//    f();
+// }
+// // abcd(12)//this is value passing
+// abcd(function(){
+//     console.log("first class function")
+// })
+
+//higher order functions-> those functions zara function return kore or accept kore function as parameter.
+//1. function abcd(val){
+//    console.log(val()) -> hey . so here abcd is higher order function
+// }
+// abcd(function(){
+//     return "hey"
+// })
+// function abcd(){
+//    return function(){
+//       console.log("Hey7e")
+//    }
+// }
+// abcd()(); //Hey7e -> bcz return e ar ekta function ache so we call twice. abcd is higher order function
+
+//pure vs impure functions
+// //pure -> which can not modify the outside value of the function
+// let a=34
+// function abcd(){
+//     console.log("hey")
+// }
+// abcd();
+// console.log(a);
+//impure -> which can modify the outside value of the function
+// let a=23
+// function abcd(){
+//     a++;
+// }
+// abcd();
+// console.log(a); //24
