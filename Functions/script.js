@@ -113,3 +113,43 @@
 // }
 // abcd();
 // console.log(a); //24
+
+//closures-> where a function is returning a function . return function parent function er kono variable use kore.
+// function abcd(){
+//     let a=4;
+//     return function(){
+//        console.log(a);
+//     }
+// }
+// abcd()() ->4
+
+//IIFE -> a function that is immediately called
+// (function(){
+//    console.log("Called")
+// })()
+
+//function expression e hoisting allowed na but declaration e allowed
+/// abcd() //allowed
+// function abcd(){
+//     console.log("hey")
+// }
+// f() //reference error
+// let f=function(){
+//     console.log("Hey")
+// }
+
+// //use rest parameter to accept any number of scores and return the total
+// function getScore(...score){
+//     let sum=0;
+//     score.forEach((s)=>{
+//        sum+=s
+//     })
+//     return sum;
+// }
+// console.log(getScore(12,13,17,19))
+
+//a function which does not return anything returns undefined
+// [1,2,3].map(function(x){
+//    console.log(x*2)
+// }) -> in this case map is the higher order function
+
