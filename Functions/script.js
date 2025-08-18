@@ -153,3 +153,19 @@
 //    console.log(x*2)
 // }) -> in this case map is the higher order function
 
+// //create an IIFE and set value to a private variable
+// let iifefunc=(function(){
+//     let score =0;
+//     return {
+//         getScore:function(){
+//             return score;
+//         },
+//         setScore:function(){
+//             score=7;
+//         }
+//     };
+// })();
+// console.log(iifefunc.setScore())
+// console.log(iifefunc.getScore())
+
+
