@@ -128,7 +128,7 @@
 //    console.log("Called")
 // })()
 
-//function expression e hoisting allowed na but declaration e allowed
+//function expression e and fat arrow function e hoisting allowed na but declaration e allowed 
 /// abcd() //allowed
 // function abcd(){
 //     console.log("hey")
