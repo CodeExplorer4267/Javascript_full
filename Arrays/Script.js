@@ -31,3 +31,27 @@
 // let newarr=a.slice(0,2)
 // console.log(newarr) //1 2 
 
+// a=[12,8,1,78,34,100];
+// let newarr=a.sort(function(a,b){
+//     return a-b; //ascending order for descending-> b-a;
+// })
+// console.log(newarr)
+
+// forEach()-> executes the function for every element in array
+//ex -> a[1,8,5,2,9] -> add 5 to every element in the array
+// let a=[1,8,5,2,9];
+// a.forEach((val)=>{
+//    console.log(val+5)
+// })
+
+//map creates a newarray based on the data of the current array.
+// let a=[5,8,2,1,9];
+// // let newarr=a.map((e)=>{
+// //     return 13;
+// // })
+// // console.log(newarr) //13 13 13 13 13
+// let newarr=a.map((e)=>{
+//     return e+6;
+// })
+// console.log(newarr) //11 14 8 7 15
+//return na dile sob undefined asbe
