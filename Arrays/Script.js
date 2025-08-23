@@ -115,3 +115,27 @@
 // console.log(second) //6
 // // we can store in any order as we want. if we want to skip the value just leave blank with a comma.
 
+// //spread operator-> copy one array into another. it will be a new array.
+// let a=[4,7,9,2];
+// let newarr=[...a]
+// console.log(newarr)
+// let newobj={...a}
+// console.log(newobj) //{ '0': 4, '1': 7, '2': 9, '3': 2 } we can also spread array elements into an object.
+
+// a=[1,4];
+// //insert 6,7 at index 1;
+// a.splice(1,0,6,7);
+// console.log(a) // 1 6 7 4
+
+//merge two arrays using spread operator
+// let a=[1,2];
+// let b=[3,4];
+// let c=[...a,...b]
+// console.log(c)
+
+//add 4 at the beginning of the array using spread operator
+// let a=[3,5,7,8];
+// a=[4,...a];
+// console.log(a)
+
+//.sort()-> numberic value k string e convert kore dey
