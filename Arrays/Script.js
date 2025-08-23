@@ -84,3 +84,34 @@
 // })
 // console.log(b);
 
+// //some()->The some() method checks if any array elements pass a test (provided as a callback function).
+// The some() method executes the callback function once for each array element.
+// The some() method returns true (and stops) if the function returns true for one of the array elements.
+// The some() method returns false if the function returns false for all of the array elements.
+// let a=[3,7,8,2];
+// let b=a.some((val)=>{
+//     // return val>7;
+//     return val >30
+// })
+// // console.log(b) //true
+// console.log(b); //false
+
+//the every() checks if every elements passes the condition or not
+// let a=[3,5,7,8];
+// let b=a.every((val)=>{
+//     // return val > 0
+//     return val > 7
+// })
+// // console.log(b) //true
+// console.log(b);//false
+
+// //destructuring-> we can pick up array variables into our own variables . we can take any name.
+// let a=[4,8,0,3,6];
+// // let [first,second]=a;
+// // console.log(first) //4
+// // console.log(second) //8
+// let [,,first,,second]=a;
+// console.log(first) //0
+// console.log(second) //6
+// // we can store in any order as we want. if we want to skip the value just leave blank with a comma.
+
