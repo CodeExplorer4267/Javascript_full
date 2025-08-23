@@ -36,3 +36,21 @@
 // let h1=document.querySelector('#head');
 // // h1.innerText="Hey guys"
 // // h1.textContent="Hello"
+
+// // let a=document.querySelector('a')
+// // a.href="https://www.google.com"
+// let a=document.querySelector('.google')
+// let b=document.querySelector('.facebook')
+// a.setAttribute('href','https://www.google.com')
+// b.setAttribute('href','https://www.facebook.com')
+// console.log(a.getAttribute('href'))
+// a.removeAttribute('href')
+
+//element create then append or prepend
+let h1=document.createElement('h1')
+h1.innerText="Hello how are you"
+document.querySelector('body').append(h1)
+let h2=document.createElement('p')
+h2.textContent="I am fine"
+// document.querySelector('body').append(h2) //ager element err pore asbe
+document.querySelector('body').prepend(h2) //ager element err age asbe
