@@ -55,3 +55,32 @@
 // })
 // console.log(newarr) //11 14 8 7 15
 //return na dile sob undefined asbe
+
+//filter-> creates a newarray based on some conditions . in this we return true or false based on some conditions.
+// let a=[5,8,2,4,9,3];
+// let newarray=a.filter((val)=>{
+//     if(val > 4){
+//         return true;
+//     }
+// })
+// console.log(newarray) // 5 8 9
+
+//reduce -> to create a single value based on the values present in the array
+// let a=[13,7,4,9];
+// let ans=a.reduce((acc,val)=>{
+//    return acc+val; //for 13 it is 0+13 and sum is stored as acc
+// },0) //we initialize the acc as 0
+// console.log(ans);
+
+// //find()-> returns the first value that matches the condition
+// let a=[4,8,3,0,6,1];
+// let b=a.find((val)=>{
+//     return val===3
+// })
+// console.log(b); //3
+// let a=[{id:1,key:2},{id:2,key:2},{id:3,key:8}];
+// let b=a.find((val)=>{
+//     return val.id===2 //2nd one
+// })
+// console.log(b);
+

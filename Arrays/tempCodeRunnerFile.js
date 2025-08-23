@@ -1,2 +1,1 @@
-a.splice(2,4);
-// console.log(a) // 1 2
+val.key===2 || val.id===2
