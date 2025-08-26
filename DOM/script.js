@@ -46,11 +46,22 @@
 // console.log(a.getAttribute('href'))
 // a.removeAttribute('href')
 
-//element create then append or prepend
-let h1=document.createElement('h1')
-h1.innerText="Hello how are you"
-document.querySelector('body').append(h1)
-let h2=document.createElement('p')
-h2.textContent="I am fine"
-// document.querySelector('body').append(h2) //ager element err pore asbe
-document.querySelector('body').prepend(h2) //ager element err age asbe
+// //element create then append or prepend
+// let h1=document.createElement('h1')
+// h1.innerText="Hello how are you"
+// document.querySelector('body').append(h1)
+// let h2=document.createElement('p')
+// h2.textContent="I am fine"
+// // document.querySelector('body').append(h2) //ager element err pore asbe
+// document.querySelector('body').prepend(h2) //ager element err age asbe
+
+ //styling using js
+//  let h1=document.querySelector('.head')
+//  h1.style.color="red"
+//  h1.style.backgroundColor="yellow"
+//  h1.style.fontSize="40px"
+
+// let h1=document.querySelector('.head');
+// h1.classList.add("newClass") //to add a class to a element
+// h1.style.backgroundColor="black"
+// h1.classList.remove("newClass") //to delete a class from a element
