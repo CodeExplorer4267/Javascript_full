@@ -65,3 +65,21 @@
 // h1.classList.add("newClass") //to add a class to a element
 // h1.style.backgroundColor="black"
 // h1.classList.remove("newClass") //to delete a class from a element
+// .classList.toggle()->class na thakle diye debe or thakle remove kore debe
+
+//types of node in DOM -> element, text,comment
+//there can be children in element node but no chindren for text nodes
+//getElementsByClassname returns html collection
+// let heading=document.getElementById('heading')
+// heading.innerText="Welcome to sheryians"
+
+// //select all li elements and print their text using a loop
+// let lis=document.querySelectorAll('li')
+// lis.forEach((val)=>{
+//     console.log(val.textContent)
+// })
+// textContent is faster and innerText is slower.textContent puro content dey irrespective seta visible or not...but innerText sudhu visible content tai debe.
+
+// let img=document.querySelector('img')
+// console.log(img.src) //ekhnae puro link ta debe
+// console.log(img.getAttribute('src'))
