@@ -83,3 +83,32 @@
 // let img=document.querySelector('img')
 // console.log(img.src) //ekhnae puro link ta debe
 // console.log(img.getAttribute('src'))
+
+// let a=document.querySelector('.sheryians')
+// a.setAttribute("href","https://www.sheryians.com")
+// The title attribute is used to specify extra information about the element. When the mouse moves over the element then it shows the information. 
+//createElement() -> returns an html node
+
+// delete a child node of a parent-> removeChild()
+// let p=document.querySelector('.parent');
+// p.removeChild(document.querySelector('.child2'))
+
+// let img=document.createElement('img')
+// img.setAttribute("src","placeholder")
+// let parentDiv=document.querySelector('.parentDiv')
+// parentDiv.prepend(img)
+
+//add a highlight class to every even item in the list set color to blue
+// let ul=document.querySelector('ul')
+// let lis=ul.querySelectorAll('li')
+// lis.forEach((val,ind)=>{
+//     if(ind % 2==0){
+//         val.classList.add('highlight')
+//     }
+// })
+// lis.forEach((val)=>{
+//     if(val.classList.contains('highlight')){ //it checks if a element has a particualr class or not
+//         val.style.color="blue"
+//     }
+// })
+
