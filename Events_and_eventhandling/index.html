@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #myform{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            width: 300px;
+        }
+        #file_input{
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <!-- <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, autem error iure reiciendis magnam nisi tempora cum, vitae maxime fugit obcaecati amet veritatis. Esse facere praesentium sed dolorum recusandae corporis, aperiam repellat eligendi porro.</p> -->
@@ -22,6 +33,19 @@
      <!-- <h1 id="head"></h1> -->
       <!-- <input type="file" id="fileinput">
       <button id="btn">Upload</button> -->
+      <form action="" id="myform">
+        <input type="text" placeholder="Enter name"/>
+        <input type="text" placeholder="Enter email"/>
+        <input type="text" placeholder="Enter Phone number"/>
+        <span><input type="file" id="file_input"><button id="file_upload">Upload</button></span>
+        <button type="submit" id="submit_button">Submit</button>
+      </form>
+      <div id="load_content" style="margin-top: 20px;height:300px;width:300px;border:1px solid black;">
+        <img src="" alt="">
+        <p class="name"></p>
+        <p class="email"></p>
+        <p class="phone"></p>
+      </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -19,6 +19,7 @@
 // input.addEventListener('input',(e)=>{
 //     console.log(e.target.value)
 // })
+
 //now create a button on clicking on this button whatver written on the input box it will show on the screen
 // let input=document.querySelector('input')
 // let button=document.querySelector('button')
@@ -76,3 +77,46 @@
 //     btn.textContent=fileName
 // })
 
+//form submit hole page reload hoy. to stop form submission use preventDefault()
+//type = submit event listener-> form submit hole trigger hoy
+// let form=document.querySelector('form')
+// form.addEventListener('submit',(e)=>{ 
+//     e.preventDefault()
+// })
+
+//create a form with name, email, phone number and profile pic . on submitting the form the data should be shown on the screen as a card
+const btn1=document.querySelector('#file_upload')
+const input1=document.querySelector('#file_input')
+const allinputs=document.querySelectorAll('input')
+const submit=document.querySelector('#submit_button')
+const imageDisplay=document.querySelector('#image_display')
+btn1.addEventListener('click',(e)=>{
+    e.preventDefault();
+    input1.click()
+})
+input1.addEventListener('change',(e)=>{
+    let filename=e.target.files[0].name
+    btn1.textContent=filename
+})
+submit.addEventListener('click',(e)=>{
+    e.preventDefault()
+    const file=input1.files[0]
+    
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            imageDisplay.src = reader.result;
+        };
+
+        reader.readAsDataURL(file);
+    }
+})
+
+// const reader = new FileReader(): We create an instance of the FileReader object. The FileReader is a built-in browser API that lets you read the contents of a file.
+
+// reader.onload = function(e) { ... }: The onload event fires when the file reading operation is successfully completed. The e.target.result contains the data URL of the file.
+
+// imageDisplay.src = e.target.result: We set the src attribute of our img tag to the data URL, which makes the image appear on the screen.
+
+// reader.readAsDataURL(file): This method tells the FileReader to start reading the file and, once complete, it will trigger the onload event. This converts the file's data into a base64 encoded string, which can be directly used as an image source.
