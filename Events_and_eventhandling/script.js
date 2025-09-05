@@ -130,3 +130,54 @@
 // reader.readAsDataURL(file): This method tells the FileReader to start reading the file and, once complete, it will trigger the onload event. This converts the file's data into a base64 encoded string, which can be directly used as an image source.
 
 //assignment due -> create a form with name, email, phone number and profile pic . on submitting the form the data should be shown on the screen as a card. Add many cars as you want they all apperar side by side on the screen.
+
+//mouseover and mouse out event listener -> mouse over mane hover korle and mouse out mane hover theke ber hole
+//create a div on hovering bg should be red and on mouse out it should be yellow
+// const div=document.querySelector('#box_div');
+// div.addEventListener('mouseover',(e)=>{
+//     div.style.backgroundColor="red"
+// })
+// div.addEventListener('mouseout',(e)=>{
+//     div.style.backgroundColor="yellow"
+// })
+
+//mousemove event listener -> jokhon mouse move korbe tokhon trigger hobe
+// create a div and on moving the mouse it will move with the mouse
+// div.addEventListener('mouseover',(e)=>{
+//     e.preventDefault()
+//     div.style.backgroundColor="red"
+// })
+// window.addEventListener('mousemove',(e)=>{
+//     div.style.position="absolute"
+//     div.style.left=`${e.clientX-50}px`
+//     div.style.top=`${e.clientY-50}px`
+// })
+
+//event object-> 
+// const div=document.querySelector('#box_div');
+// div.addEventListener('click',(e)=>{ //thst e is the event object
+      
+// })
+//zar upor actual event hoy that is target
+
+//event bubbling and capturing
+ //event bubbling->kono element er upor event asle and otate event listener na thakle oi event oi element er parent element e khujbe erom korte korte upor dik move korbe joto khon na event listener pabe ba document er upor chole asbe. zodi child and parent er duitar e event listener thake tahole age child er event listener kaj korbe tarpor parent er
+
+//  const p=document.querySelector('p')
+//  const nav=document.querySelector('#nav');
+//  const main=document.querySelector('#main');
+// //  p.addEventListener('click',(e)=>{
+// //     alert("Clicked on paragraph")
+// //  })
+// // nav.addEventListener('click',(e)=>{
+// //     alert("Clicked on Nav")
+// // })
+// main.addEventListener('click',(e)=>{
+//     alert("Clicked on main") -> nav e listener nei tai main e jabe direct
+// })
+
+//create 5 li tags and whenever each tag is clicked it should cross it and make it toggle
+// const ul=document.querySelector('ul')
+// ul.addEventListener('click',(e)=>{
+//     e.target.classList.toggle('lt')
+// })
