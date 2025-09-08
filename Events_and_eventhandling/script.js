@@ -181,3 +181,38 @@
 // ul.addEventListener('click',(e)=>{
 //     e.target.classList.toggle('lt')
 // })
+
+//amra zokhon click kori ba kono event raise kori. sei event flow ta 2 to phase e chole. 
+//phase 1 : event top level element thek nicher dike asbe
+//phase 2 : event raised element thek parent er dike jabe
+//first e phase 1 hoy.
+//first e capture phase then bubbling phase
+
+// let p1=document.querySelector('.parent1')
+// let p2=document.querySelector('.parent2')
+// let p3=document.querySelector('.parent3')
+// let p4=document.querySelector('.parent4')
+// let child=document.querySelector('.child')
+
+// child.addEventListener('click',(e)=>{
+//     alert("Child Clicked")
+// })
+// p3.addEventListener('click',(e)=>{
+//     alert("Parent 3 clicked")
+// })
+// p1.addEventListener('click',(e)=>{
+//     alert("parent 1 clicked")
+// },true) //this is capturing phase 
+
+//create an input box and print how many character are typed
+let input=document.querySelector('input');
+let btn=document.querySelector('#btn')
+let count=0;
+input.addEventListener('input',(e)=>{
+    count++;
+})
+btn.addEventListener('click',(e)=>{
+    let h1=document.createElement('h1');
+    h1.textContent="You have typed "+count+"characters";
+    document.body.appendChild(h1)
+})
