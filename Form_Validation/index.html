@@ -1,36 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        small{
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email & Password Validator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f4;
+    }
+
+    .container {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: -5px;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    .success {
+      color: green;
+      font-size: 14px;
+      margin-top: -5px;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <form>
-        <input type="text" id="name" placeholder="Enter Your name">
-        <small>Your name should be minimum 3 characters</small>
-        <br>
-        <br>
-        <input type="email" id="email" placeholder="Enter your email">
-        <br>
-        <br>
-        <input type="password" id="pass" placeholder="Enter Your Password">
-        <br>
-        <br>
-        <select>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="others">Others</option>
-        </select>
-        <br>
-        <br>
-        <button type="submit">Submit</button>
+
+  <div class="container">
+    <h2>Login Form</h2>
+    <form id="loginForm">
+      <label>Email:</label>
+      <input type="text" id="email" placeholder="Enter your email">
+      <div id="emailError" class="error">Invalid email address</div>
+
+      <label>Password:</label>
+      <input type="password" id="password" placeholder="Enter your password">
+      <div id="passwordError" class="error">Password must be 8+ chars, include upper, lower, number, and symbol</div>
+
+      <button type="submit">Submit</button>
+      <div id="successMsg" class="success">Form submitted successfully ✅</div>
     </form>
-    <script src="script.js"></script>
+  </div>
+
+  <script>
+    // Regex for email validation
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    // Regex for password validation
+    // At least 8 chars, one uppercase, one lowercase, one number, one special char
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    const form = document.getElementById("loginForm");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const emailError = document.getElementById("emailError");
+    const passwordError = document.getElementById("passwordError");
+    const successMsg = document.getElementById("successMsg");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault(); // Stop page refresh
+      let valid = true;
+
+      // Email check
+      if (!emailRegex.test(emailInput.value)) {
+        emailError.style.display = "block";
+        valid = false;
+      } else {
+        emailError.style.display = "none";
+      }
+
+      // Password check
+      if (!passwordRegex.test(passwordInput.value)) {
+        passwordError.style.display = "block";
+        valid = false;
+      } else {
+        passwordError.style.display = "none";
+      }
+
+      // If both valid
+      if (valid) {
+        successMsg.style.display = "block";
+      } else {
+        successMsg.style.display = "none";
+      }
+    });
+  </script>
+
 </body>
 </html>
