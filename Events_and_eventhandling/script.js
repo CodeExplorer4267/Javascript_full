@@ -205,14 +205,25 @@
 // },true) //this is capturing phase 
 
 //create an input box and print how many character are typed
-let input=document.querySelector('input');
-let btn=document.querySelector('#btn')
-let count=0;
-input.addEventListener('input',(e)=>{
-    count++;
-})
-btn.addEventListener('click',(e)=>{
-    let h1=document.createElement('h1');
-    h1.textContent="You have typed "+count+"characters";
-    document.body.appendChild(h1)
-})
+// let input=document.querySelector('input');
+// let btn=document.querySelector('#btn')
+// let count=0;
+// input.addEventListener('input',(e)=>{
+//     count++;
+// })
+// btn.addEventListener('click',(e)=>{
+//     let h1=document.createElement('h1');
+//     h1.textContent="You have typed "+count+"characters";
+//     document.body.appendChild(h1)
+// })
+//now add a feature that if backspace is pressed then count should decrease + if total count > 20 it show alert
+// let input=document.querySelector('input');
+// let span=document.querySelector('span');
+// input.addEventListener('input',(e)=>{
+//     if(e.target.value.length <= 20){
+//       span.textContent= 20-(e.target.value.length);
+//     }
+//     else{
+//         alert("You have crossed the limit")
+//     }
+// })
