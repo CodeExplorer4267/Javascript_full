@@ -31,12 +31,31 @@
 // clearInterval(si)
 
 //create a counter that will count from 10 to 0..after reaching 0 it will stop
-let count=10;
-let si=setInterval(()=>{
-   console.log(count);
-   count--;
-   if(count < 0){
-      console.log("Time Out")
-      clearInterval(si)
+// let count=10;
+// let si=setInterval(()=>{
+//    console.log(count);
+//    count--;
+//    if(count < 0){
+//       console.log("Time Out")
+//       clearInterval(si)
+//    }
+// },1000)
+
+//create a download progress bar
+let prog=document.querySelector('.download_progress')
+let perc=document.querySelector('.percentage')
+let count=0;
+let interval=setInterval(()=>{
+   if(count > 100){
+      clearInterval(interval)
+      let h1=document.createElement('h1');
+      h1.textContent="Your download is finished";
+      h1.style.textAlign="center"
+      document.body.appendChild(h1)
    }
-},1000)
+   else{
+     prog.textContent=`${count}%`;
+     perc.style.width=`${count}%`
+     count++;
+   } 
+},30)
