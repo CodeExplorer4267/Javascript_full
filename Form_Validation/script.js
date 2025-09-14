@@ -85,3 +85,5 @@ console.log(usernameRegex.test("ru"));         // false (too short)
 // Show/hide error messages.
 
 // If all valid → show success message.
+
+//.value is only used for input fields and .textContent is used for some element like h1.textContent
