@@ -42,20 +42,20 @@
 // },1000)
 
 //create a download progress bar
-let prog=document.querySelector('.download_progress')
-let perc=document.querySelector('.percentage')
-let count=0;
-let interval=setInterval(()=>{
-   if(count > 100){
-      clearInterval(interval)
-      let h1=document.createElement('h1');
-      h1.textContent="Your download is finished";
-      h1.style.textAlign="center"
-      document.body.appendChild(h1)
-   }
-   else{
-     prog.textContent=`${count}%`;
-     perc.style.width=`${count}%`
-     count++;
-   } 
-},30)
+// let prog=document.querySelector('.download_progress')
+// let perc=document.querySelector('.percentage')
+// let count=0;
+// let interval=setInterval(()=>{
+//    if(count > 100){
+//       clearInterval(interval)
+//       let h1=document.createElement('h1');
+//       h1.textContent="Your download is finished";
+//       h1.style.textAlign="center"
+//       document.body.appendChild(h1)
+//    }
+//    else{
+//      prog.textContent=`${count}%`;
+//      perc.style.width=`${count}%`
+//      count++;
+//    } 
+// },30)
